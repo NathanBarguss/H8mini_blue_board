@@ -58,10 +58,12 @@ float b[3] = { 0.0 , 0.0 , 0.0};
 
 
 // output limit			
-const float outlimit[PIDNUMBER] = { 0.8 , 0.8 , 0.4 };
+// Stock: const float outlimit[PIDNUMBER] = { 0.8 , 0.8 , 0.4 };
+const float outlimit[PIDNUMBER] = { 0.8 , 0.8 , 0.6 };
 
 // limit of integral term (abs)
-const float integrallimit[PIDNUMBER] = { 0.8 , 0.8 , 0.4 };
+// Stock: const float integrallimit[PIDNUMBER] = { 0.8 , 0.8 , 0.4 };
+const float integrallimit[PIDNUMBER] = { 0.8 , 0.8 , 0.6 };
 
 
 

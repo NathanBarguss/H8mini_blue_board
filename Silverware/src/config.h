@@ -6,11 +6,14 @@
 
 // rate in deg/sec
 // for acro mode
-#define MAX_RATE 360.0
-#define MAX_RATEYAW 360.0
+// Stock: #define MAX_RATE 360.0
+// Stock: #define MAX_RATEYAW 360.0
+#define MAX_RATE 720.0
+#define MAX_RATEYAW 720.0
 
 // max angle for level mode
-#define MAX_ANGLE_HI 55.0f
+//Stock: #define MAX_ANGLE_HI 55.0f
+#define MAX_ANGLE_HI 75.0f
 
 #define LOW_RATES_MULTI 0.5f
 
@@ -21,7 +24,8 @@
 // also comment out DISABLE_EXPO to use
 // -1 to 1 , 0 = no exp
 // positive = less sensitive near center 
-#define EXPO_XY 0.3
+// Stock: #define EXPO_XY 0.3
+#define EXPO_XY 0.0
 #define EXPO_YAW 0.0
 
 
