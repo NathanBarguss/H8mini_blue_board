@@ -8,7 +8,7 @@
 // for acro mode
 // Stock: #define MAX_RATE 360.0
 // Stock: #define MAX_RATEYAW 360.0
-#define MAX_RATE 720.0
+#define MAX_RATE 1440.0
 #define MAX_RATEYAW 720.0
 
 // max angle for level mode
@@ -119,17 +119,18 @@
 // CH_ON - on always ( all protocols)
 // CH_OFF - off always ( all protocols)
 
-#define HEADLESSMODE CH_OFF
-// rates / expert mode
-#define RATES CH_EXPERT
+// Defaults:
+// #define HEADLESSMODE CH_OFF
+// #define RATES CH_EXPERT
+// #define LEVELMODE CH_AUX1
+// #define STARTFLIP CH_OFF
+// #define LEDS_ON CH_ON
 
-#define LEVELMODE CH_AUX1
-
+#define HEADLESSMODE CH_HEADFREE
+#define RATES CH_ON
+#define LEVELMODE CH_FLIP
 #define STARTFLIP CH_OFF
-
-#define LEDS_ON CH_ON
-
-
+#define LEDS_ON CH_RTH
 
 // aux1 channel starts on if this is defined, otherwise off.
 #define AUX1_START_ON
@@ -195,8 +196,8 @@
 
 
 // Flash saving features
-#define DISABLE_HEADLESS
-#define DISABLE_FLIP_SEQUENCER
+// #define DISABLE_HEADLESS
+// #define DISABLE_FLIP_SEQUENCER
 
 // led brightness in-flight ( solid lights only)
 // 0- 15 range
