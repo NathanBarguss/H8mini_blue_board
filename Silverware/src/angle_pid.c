@@ -8,13 +8,21 @@
 
 #define APIDNUMBER 2
 
-//                             ANGLE PIDS      
-// yaw is done by the rate yaw pid
-// Kp                       ROLL     PITCH  
-float apidkp[APIDNUMBER] = { 14e-2, 14e-2 };
+//#define QUAD_GEARED
+#ifdef QUAD_GEARED
+	float apidkp[APIDNUMBER] = { 1.5e-2, 1.5e-2 };
+	float apidki[APIDNUMBER] = { 4e-2, 4e-2 };
+#else
+	//                          ANGLE PIDS      
+	// yaw is done by the rate yaw pid
+	// Kp                       ROLL   PITCH  
+	float apidkp[APIDNUMBER] = { 14e-2, 14e-2 };
 
-// Ki                        ROLL     PITCH  
-float apidki[APIDNUMBER] = { 0e-2, 0e-2 };   
+	// Ki                       ROLL   PITCH  
+	float apidki[APIDNUMBER] = { 0e-2, 0e-2   }; 
+#endif
+
+
 
 // code variables below
 

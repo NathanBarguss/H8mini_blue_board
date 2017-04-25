@@ -39,22 +39,24 @@ THE SOFTWARE.
 
 #include "defines.h"
 
+//#define QUAD_GEARED
+#ifdef QUAD_GEARED
+	float pidkp[PIDNUMBER] = { 10e-2, 	10e-2, 		7e-1 };
+	float pidki[PIDNUMBER] = { 3e-1, 		3e-1, 		7e-1 };
+	float pidkd[PIDNUMBER] = { 6e-1, 		6e-1, 		5e-1 };
+#else
+	// Kp											ROLL       PITCH     YAW
+	float pidkp[PIDNUMBER] = { 17.0e-2 , 17.0e-2  , 10e-1 }; 
+	// Ki											ROLL       PITCH     YAW
+	float pidki[PIDNUMBER] = { 15e-1  , 15e-1 , 5e-1 };	
+	// Kd											ROLL       PITCH     YAW
+	float pidkd[PIDNUMBER] = { 6.8e-1 , 6.8e-1  , 0.0e-1 };	
+#endif
 
 
-// Kp											ROLL       PITCH     YAW
-float pidkp[PIDNUMBER] = { 17.0e-2 , 17.0e-2  , 10e-1 }; 
-
-// Ki											ROLL       PITCH     YAW
-float pidki[PIDNUMBER] = { 15e-1  , 15e-1 , 5e-1 };	
-
-// Kd											ROLL       PITCH     YAW
-float pidkd[PIDNUMBER] = { 6.8e-1 , 6.8e-1  , 0.0e-1 };	
 
 // "setpoint weighting" 0.0 - 1.0 where 0.0 = normal pid
 float b[3] = { 0.0 , 0.0 , 0.0};
-
-
-
 
 
 // output limit			
